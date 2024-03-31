@@ -1,9 +1,9 @@
 name: Terraform
 
 on: [push]
-#env: 
-   #AWS_ACCESS_KEY: ${{ secrets.ACCESS_KEY }}
-   #AWS_SECRET_ACCESS_KEY: ${{ secrets. SECRET_KEY }}
+env: 
+   AWS_ACCESS_KEY: ${{ secrets.ACCESS_KEY }}
+   AWS_SECRET_ACCESS_KEY: ${{ secrets. SECRET_KEY }}
 
 jobs:
   terraform:
@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: set up terraform
-        uses: hashicorp/setup-terraform@v2
+        uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: 1.7.5
       - name: terraform init
