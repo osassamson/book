@@ -1,10 +1,10 @@
-name: shell commands
+name: terraform
 
 on: [push]
 
 jobs:
   
-  run-shell-command:
+  terraform:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
