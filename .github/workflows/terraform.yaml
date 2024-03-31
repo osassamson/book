@@ -1,4 +1,4 @@
-name: terraform
+name: Terraform
 
 on: [push]
 env: 
@@ -6,7 +6,7 @@ env:
    AWS_SECRET_ACCESS_KEY: ${{ secrets. SECRET_KEY }}
 
 jobs:
-  terrraform:
+  terraform:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
