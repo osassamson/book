@@ -14,8 +14,8 @@ jobs:
         with: 
           terraform_version: 1.1.9
       - name: terraform init
-        uses: terraform init
+        run: terraform init
       - name: validate
-        uses: terraform validate
+        run: terraform validate
       - name: plan
-        uses: terraform plan
+        run: terraform plan
