@@ -14,13 +14,13 @@ jobs:
       - name: set up terraform
         uses: hashicorp/setup-terraform@v2
         with:
-          terraform_version: 1.1.9
-      - name: terraform initialization
+          terraform_version: 1.7.5
+      - name: terraform init
         uses: terraform init
-      #- name: validation
-     #   uses: terraform validate
-     # - name: terraform format
-     #   uses:  terraform fmt
-     # - name: terraform plan
-       # uses: terraform plan        
+      - name: validation
+        uses: terraform validate
+      - name: format
+        uses: terraform fmt
+      - name: plan
+        uses: terraform plan        
 
